@@ -1,0 +1,20 @@
+{
+  "name": "restaurant_list_app",
+  "version": "1.0.0",
+  "description": "Restaurant list app with node, express and mysql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewjw2007/CS340_Restaurant_Web_App.git"
+  },
+  "author": "Matthew Esqueda, Hillary Dreikorn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.12"
+  }
+}
