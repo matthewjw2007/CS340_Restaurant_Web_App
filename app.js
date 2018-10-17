@@ -13,6 +13,14 @@ app.get('/', function(req,res){
   res.render('home');
 });
 
+app.get('/lists', function(req,res){
+  res.render('lists');
+});
+
+app.get('/about', function(req,res){
+  res.render('about');
+});
+
 app.listen(app.get('port'), function(){
   console.log('Express has started on localhost!');
 });
