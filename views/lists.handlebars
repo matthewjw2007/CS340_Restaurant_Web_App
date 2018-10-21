@@ -1,10 +1,85 @@
+<!doctype html>
+
 <div class="container">
+  <h2>Hello, {username}!</h2>
   <div class="row">
     <div class="col-xs-4">
-      My Lists
+      <p>{username}'s Lists</p>
+      <div>
+        {#if lists} {#each lists}
+        <ul id="side-bar-lists">
+          <li> {lst_name} </li>
+        </ul>
+      {/if} {/each}
+      </div>
+      <div class="row justify-content-center">
+          <button type="button" class="btn btn-info">Add New List</button>
+      </div>
     </div>
     <div class="col-xs-8">
-      List Name
+      {lst_name}
+        <table id="pri_list">
+            <thead>
+                <tr>
+                    <th>Restaurant Name</th>
+                    <th>Address</th>
+                    <th>Food Type</th>
+                    <th>Actions <br>(Delete or Move to Recommendations)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each pri_list_rr}
+                <tr id = {lst_id}>
+                    <td>{rr_name}</td>
+                    <td>{addr}, {city}, {state} {zip}</td>
+                    <td>{foodtype}</td>
+                    <td>
+                        <button id="recomBtn" type="submit" onclick="">Recommend
+                            <i class="far fa-thumbs-up"></i>
+                        </button>
+                        <button id="delBtn" type="submit" onclick="">Delete
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                {/each}
+            </tbody>
+        </table>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-info" id="horizontal-btn">Share this list with a friend!</button>
+            <button type="button" class="btn btn-info" id="horizontal-btn">Add restraunt to this list!</button>
+        </div>
     </div>
   </div>
 </div>
+<h1>ADD RESTAURANT FORM</h1>
+<form>
+  <div class="form-group">
+    <label for="rrName">Restaurant Name</label>
+    <input type="text" class="form-control" id="rrName">
+  </div>
+  <div class="form-group">
+    <label for="addr">Address</label>
+    <input type="text" class="form-control" id="addr">
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input type="text" class="form-control" id="city">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>AL</option>
+      <option>AK</option>
+      <option>AZ</option>
+      <option>AR</option>
+      <option>CA</option>
+      <option>...MORE TO BE ADDED...</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="foodType">City</label>
+    <input type="text" class="form-control" id="foodType">
+  </div>
+  <button type="submit" class="btn btn-info">Submit</button>
+</form>
