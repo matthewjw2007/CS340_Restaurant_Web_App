@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+}
+#img {
+    background-image: url("../images/davide-cantelli-148407-unsplash.jpg");
+    /*position: relative;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+#container {
+    height: 100%;
+    text-align: center;
+    padding-top: 25%;
+    position: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 0px 13px rgba(0, 0, 0, 0.1),
+    0px 10px 23px rgba(0, 0, 0, 0.1);
+}
+
+#title {
+    color: white;
+    font-weight: 700;
+    font-size: 5em;
+}
+
+hr {
+    width: 800px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.loginBox {
+    background-color: #04395E;
+    padding: 10px;
+    margin: auto auto;
+    max-width: 30%;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4), 0 1px 13px rgba(0, 0, 0, 0.24), 0px 10px 23px rgba(0, 0, 0, 0.1);
+}
+
+#username, #password {
+    margin: 6px;
+    padding: 12px 12px 12px 10px;
+    float: center;
+    width: 93%;
+    background-color: #A9CEF4;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4), 0 1px 13px rgba(0, 0, 0, 0.24), 0px 10px 23px rgba(0, 0, 0, 0.1);
+}
+
+input[type = 'submit'] {
+    padding: 12px 19px;
+    cursor: pointer;
+    background-color: #2E6171;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4), 0 1px 13px rgba(0, 0, 0, 0.24), 0px 10px 23px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-inverse {
+    background-color: #2c3e50;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+html {
+    height: 100%;
+}
