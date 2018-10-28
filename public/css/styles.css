@@ -77,3 +77,60 @@ input[type = 'submit'] {
 html {
     height: 100%;
 }
+
+#sign-up {
+    margin-left: 6px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+#logo {
+    width: 25px;
+    height: 50px;
+}
+
+.horizontal-btn {
+    margin: 15px;
+}
+
+#pri_list {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#pri_list td, #pri_list th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#pri_list tr:nth-child(even){background-color: #9bc4db;}
+
+#pri_list tr:hover {background-color: rgb(20, 233, 187);}
+
+#pri_list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #495057;
+    color: rgb(221, 236, 238);
+}
+
+ul {
+    list-style-type: none;
+}
+
+#side-bar {
+    width: auto;
+    z-index: 1;
+    background: #495057;
+    color: rgb(221, 236, 238);
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+#side-bar li:hover {background-color: rgb(20, 233, 187);}
