@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Hello, {username}!</h2>
+  <button type="button" class="btn btn-link"onclick="edit()">Edit Account</button>
+  <div class="row justify-content-center">
+    <div class="col-xs-4 text-center mx-auto">
+      <h4>{username}'s Lists</h4>
+      <div>
+        {#if lists} {#each lists}
+        <ul id="side-bar">
+          <li> {lst_name} </li>
+        </ul>
+      {/if} {/each}
+      </div>
+      <div class="row justify-content-center">
+          <button type="button" class="btn btn-info" onClick="addList()">Add New List</button>
+      </div>
+    </div>
+    <div class="col-xs-8 text-center mx-auto">
+      <h4>{list_name}</h4>
+        <table id="pri_list">
+            <thead>
+                <tr>
+                    <th>Restaurant Name</th>
+                    <th>Address</th>
+                    <th>Food Type</th>
+                    <th>Actions <br>(Delete or Move to Recommendations)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each pri_list_rr}
+                <tr id = {lst_id}>
+                    <td>{rr_name}</td>
+                    <td>{addr}, {city}, {state} {zip}</td>
+                    <td>{foodtype}</td>
+                    <td>
+                        <button id="recomBtn" type="submit" onclick="" class="horizontal-btn">Recommend
+                            <i class="far fa-thumbs-up"></i>
+                        </button>
+                        <button id="delBtn" type="submit" onclick="" class="horizontal-btn">Delete
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                {/each}
+            </tbody>
+        </table>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-info horizontal-btn" onClick= "findFriend()">Share this list with a friend!</button>
+            <button type="button" class="btn btn-info horizontal-btn" onClick="addRR()">Add restraunt to this list!</button>
+        </div>
+    </div>
+  </div>
+</div>
