@@ -1,11 +1,15 @@
 <div class="container down row justify-content-center">
   <h1>Add New List:</h1>
   <div class="container down row justify-content-center">
-    <form>
+    <form id="addList-form" action="addList" method="post">
       <div class="form-group">
         <label for="listName">List Name</label>
-        <input type="text" class="form-control" id="listName">
+        <input type="text" class="form-control" id="listName" name="lst_name">
         <small id="emailHelp" class="form-text text-muted">Pick a name for your list that represents what the list is about.</small>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="check_rec" name="check_rec">
+        <label class="form-check-label" for="exampleCheck1">Make it a Recomendation List!</label>
       </div>
       <button type="submit" class="btn btn-info">Submit</button>
     </form>
