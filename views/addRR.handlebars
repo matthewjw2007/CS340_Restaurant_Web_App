@@ -1,40 +1,84 @@
 <div class="container down row justify-content-center">
   <h1>Add New Restaurant:</h1>
   <div class="container down row justify-content-center">
-    <form>
+    <form id="addRR-form" action="addRR/" method="post">
       <div class="form-group">
-        <label for="rrName">Restaurant Name</label>
-        <input type="text" class="form-control" id="rrName">
+        <label for="rr_name">Restaurant Name</label>
+        <input type="text" class="form-control" name="rr_name">
       </div>
       <div class="form-group">
-        <label for="addr">Address</label>
-        <input type="text" class="form-control" id="addr">
+        <label for="rr_address">Address</label>
+        <input type="text" class="form-control" name="rr_address">
       </div>
       <div class="form-group">
-        <label for="city">City</label>
-        <input type="text" class="form-control" id="city">
+        <label for="rr_city">City</label>
+        <input type="text" class="form-control" name="rr_city">
       </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect1">State</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <label for="rr_state">State</label>
+        <select class="form-control" name="rr_state">
           <option>AL</option>
           <option>AK</option>
           <option>AZ</option>
           <option>AR</option>
           <option>CA</option>
-          <option>...MORE TO BE ADDED...</option>
+          <option>CO</option>
+          <option>CT</option>
+          <option>DE</option>
+          <option>FL</option>
+          <option>GA</option>
+          <option>HI</option>
+          <option>ID</option>
+          <option>IL</option>
+          <option>IN</option>
+          <option>IA</option>
+          <option>KS</option>
+          <option>KY</option>
+          <option>LA</option>
+          <option>ME</option>
+          <option>MD</option>
+          <option>MA</option>
+          <option>MI</option>
+          <option>MN</option>
+          <option>MS</option>
+          <option>MO</option>
+          <option>MT</option>
+          <option>NE</option>
+          <option>NV</option>
+          <option>NH</option>
+          <option>NJ</option>
+          <option>NM</option>
+          <option>NY</option>
+          <option>NC</option>
+          <option>ND</option>
+          <option>OH</option>
+          <option>OK</option>
+          <option>OR</option>
+          <option>PA</option>
+          <option>RI</option>
+          <option>SC</option>
+          <option>SD</option>
+          <option>TN</option>
+          <option>TX</option>
+          <option>UT</option>
+          <option>VT</option>
+          <option>VA</option>
+          <option>WA</option>
+          <option>WV</option>
+          <option>WI</option>
+          <option>WY</option>
         </select>
       </div>
       <div class="form-group">
         {{!-- Reference: https://stackoverflow.com/questions/23676778/what-html5-form-attribute-should-be-used-for-a-zipcode --}}
         <label>ZIP Code</label>
-        <input type="text" pattern="[0-9]{5}" class="form-control" title="Five digit zip code" />
+        <input type="text" pattern="[0-9]{5}" class="form-control" title="Five digit zip code" name="rr_zip"/>
       </div>
       <div class="form-group">
-        <label for="foodType">Food Type</label>
-        <input type="text" class="form-control" id="foodType">
+        <label for="rr_foodType">Food Type</label>
+        <input type="text" class="form-control" name="rr_foodType">
       </div>
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn btn-info" id="submitRR">Submit</button>
     </form>
   </div>
 </div>
