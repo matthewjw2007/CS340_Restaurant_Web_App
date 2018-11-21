@@ -1,16 +1,16 @@
 <div class="container down">
   <div class="row justify-content-center">
-    <form>
+    <form id="addUsr-form" action="addUsr" method="post"> 
       <div class="form-group">
         <label for="un">Username</label>
-        <input type="text" class="form-control" id="un" aria-describedby="emailHelp" placeholder="Username">
+        <input type="text" class="form-control" id="usr_name" name="usr_name" placeholder="Username">
         <small id="usernamehelp" class="form-text text-muted">Choose a username that is 20 characters or less.</small>
       </div>
       <div class="form-group">
         <label for="pw">Password</label>
-        <input type="password" class="form-control" id="pw" placeholder="Password">
+        <input type="password" class="form-control" name="passcode" id="passcode" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn btn-info" id="addUsr-btn">Submit</button>
     </form>
   </div>
 </div>
