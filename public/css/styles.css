@@ -97,22 +97,22 @@ html {
     margin: 15px;
 }
 
-#pri_list {
+.style-table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 50px;
 }
 
-#pri_list td, #pri_list th {
+.style-table td, .style-table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#pri_list tr:nth-child(even){background-color: #9bc4db;}
+.style-table tr:nth-child(even){background-color: #9bc4db;}
 
-#pri_list tr:hover {background-color: rgb(20, 233, 187);}
+.style-table tr:hover {background-color: rgb(20, 233, 187);}
 
-#pri_list th {
+.style-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
