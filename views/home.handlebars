@@ -7,20 +7,28 @@
                     <hr>
                     {{#if loggedOut}}
                         <!--If the user is not logged in then this form will display-->
-                        <form class="loginBox">
+                        <form class="loginBox" id='login' action='/signin'>
                             <!--<label for="username">Username:</label>-->
                             <input type="text" id="username" name="username" placeholder="Username">
                             <br>
                             <!--<label for="password">Password:</label>-->
                             <input type="password" id="password" name="password" placeholder="Password">
                             <br>
-                            <input class="btn btn-block btn-dark" type="submit" value="Log In">
+                            <input class="button" type="submit" value="Log In" id="login" onclick="return sign_in()">
                         </form>
                     {{else}}
                         <!--If the user is logged in then this form will display-->
-                        <form class="loginBox">
+                        {{!-- <form class="loginBox">
                             <input class="btn btn-block btn-dark" type="submit" value="Log Out">
-                        </form>
+                        </form> --}}
+                        <div class="jumbotron">
+                            <h1>Use nav bar to navigate through the entites.</h1>
+                            <ul>
+                                <li>All current users is first tab. To add new one, click sign up on far right nav bar.</li>
+                                <li>Navigating to lists from this page will not show lists since you haven't picked a user.</li>
+                                <li>Lists page will contain both priority and recommendation list. Along with the restraunts in each list.</li>
+                            </ul>
+                        </div>
                     {{/if}}
                 </div>
             </div>
