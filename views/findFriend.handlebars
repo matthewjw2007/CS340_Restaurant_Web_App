@@ -1,12 +1,47 @@
 <div class="container down row justify-content-center">
+  {{#if added_success}}
+    <br>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Awesome!</strong> {{#each usr_name}} {{usr_name}} {{/each}} has been added to this list. You can navigate away from this page.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {{else}}
+  {{#if found}}
+      <h1>Search results:</h1><br>
+      <div class="container down row justify-content-center">
+        <form id="add-friend" action="/addFriend/{{lst_id}}" method='post'>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Pick the User you want to add</label>
+            <select class="form-control" id="exampleFormControlSelect1"  name="addUsr">
+              {{#each user}}
+              <option value={{usr_id}}>{{usr_name}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <button type="submit" class="btn btn-info">Choose &amp; Add</button>
+        </form>
+      </div>
+  {{else}}
   <h1>Search for Friend to Add:</h1> <br>
+  {{#if not_found}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Oh no!</strong> No users were found. You can try another below or navigate back to your page.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {{/if}}
   <div class="container down row justify-content-center">
-    <form>
+    <form id="search-friend" action="/findFriend/{{lst_id}}" method='post'>
       <div class="form-group">
-        <label for="friendUN">Friend's Username</label>
-        <input type="text" class="form-control" id="friendUN">
+        <label for="searchItem">Friend's Username</label>
+        <input type="text" class="form-control" id="searchItem" name="searchItem">
       </div>
       <button type="submit" class="btn btn-info">Submit</button>
     </form>
   </div>
+  {{/if}}
+  {{/if}}
 </div>
