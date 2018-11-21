@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col text-center mx-auto">
+    <h1>List of Current Restaurants</h1>
+      <table class="style-table" id="pri_list">
+        <thead>
+            <tr>
+                <th>Restaurant Name</th>
+                <th>Address</th>
+                <th>Food Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each restaurants}}
+            <tr id = {{rr_id}}>
+                <td>{{rr_name}}</td>
+                <td>{{rr_address}}, {{rr_city}}, {{rr_state}} {{rr_zip}}</td>
+                <td>{{rr_foodType}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+  </div>
+</div>

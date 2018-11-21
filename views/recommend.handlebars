@@ -1,0 +1,20 @@
+<div class="container down row justify-content-center">
+  <h1>Choose one of your recommendation lists to add {{rr_name}}:</h1> <br>
+  <div class="container down row justify-content-center">
+    <form action="recRR/" method="POST">
+      <div class="form-group">
+        <label for="reclist">Select List</label>
+        <select class="form-control" id="reclist" name="reclist">
+          {{#if recommendation_list}}
+          {{#each recommendation_list}}
+          <option value={{rec_id}}>{{name}}</option>
+          {{/each}}
+          {{else}}
+          <option>No lists available</option>
+          {{/if}}
+        </select>
+      </div>
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
